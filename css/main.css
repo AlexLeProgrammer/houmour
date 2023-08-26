@@ -6,12 +6,25 @@
     border: 0;
     font-family: Montserrat;
 
+    color: var(--black);
+    background-color: var(--white);
+
     /* STRUCTURE */
     --bordercolumns: 21vw;
     --centercolumn: 50vw;
+}
 
-    /* PALETTE */
+/* PALETTE */
+.light-theme {
+    --white: white;
+    --black: black;
     --grey: #d4d4d4;
+    --blue: #0B22EE;
+}
+.dark-theme {
+    --white: black;
+    --black: white;
+    --grey: #474747;
     --blue: #0B22EE;
 }
 
