@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Houmour</title>
 
+    <!--FONT-->
+    <link rel="preload" as="font" href="css/fonts/Montserrat/Montserrat.ttf" />
+
     <!--CSS-->
+    <link rel="stylesheet" href="css/fonts/fonts.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -23,9 +27,24 @@
         </div>
     </nav>
     <div id="sections">
-        <section id="pages"></section>
-        <section id="feed"></section>
-        <section id="notifications-profiles"></section>
+        <section id="pages">
+            <h2>Parcourir</h2>
+            <button>Tendances</button>
+
+            <h3>Utilisateurs</h3>
+            <button>Les plus drôles</button>
+            <button>Les moins drôles</button>
+            
+            <h3>Blagues</h3>
+            <button>Les plus drôles</button>
+            <button>Les moins drôles</button>
+        </section>
+        <section id="feed">
+            <h1 id="feed-title">Tendances</h1>
+        </section>
+        <section id="notifications-profiles">
+            <h2>Notifications</h2>
+        </section>
     </div>
 </body>
 </html>

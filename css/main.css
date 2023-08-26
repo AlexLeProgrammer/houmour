@@ -1,15 +1,18 @@
+/* #region REGELES GENERALES */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: Montserrat;
 
     /* STRUCTURE */
     --bordercolumns: 21vw;
     --centercolumn: 50vw;
 
     /* PALETTE */
-    --grey: #d4d4d4
+    --grey: #d4d4d4;
+    --blue: #0B22EE;
 }
 
 button {
@@ -20,6 +23,20 @@ body {
     padding: 0 2vw;
 }
 
+h1 {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+/* #endregion */
+
+/* #region STRUCTURE */
 nav {
     display: flex;
     justify-content: space-between;
@@ -31,6 +48,10 @@ nav div {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+nav div:first-child {
+    justify-content: flex-start;
 }
 
 nav div:nth-child(2) {
@@ -49,12 +70,17 @@ nav div:last-child {
 section {
     width: var(--bordercolumns);
     height: 90vh;
-    border: 1px solid black;
 }
 
 section#feed {
     width: var(--centercolumn);
 }
+
+section *:first-child {
+    text-align: center;
+    margin-bottom: 3vh;
+}
+/* #endregion */
 
 /* #region NAV */
 nav input {
@@ -70,5 +96,12 @@ nav button {
     background-color: var(--grey);
     margin-left: 2.5vh;
     border-radius: 50%;
+}
+/* #endregion */
+
+/* #region PAGES */
+#pages button {
+    background-color: transparent;
+    display: block;
 }
 /* #endregion */
