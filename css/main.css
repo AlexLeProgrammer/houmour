@@ -20,16 +20,21 @@
     --black: black;
     --grey: #d4d4d4;
     --blue: #0B22EE;
+    --red: red;
+    --green: green;
 }
 .dark-theme {
     --white: black;
     --black: white;
     --grey: #474747;
     --blue: #0B22EE;
+    --red: red;
+    --green: green;
 }
 
-button {
+button, a {
     cursor: pointer;
+    text-decoration: none;
 }
 
 body {
@@ -89,18 +94,24 @@ section#feed {
     width: var(--centercolumn);
 }
 
-section *:first-child {
+section>*:first-child {
     text-align: center;
     margin-bottom: 3vh;
 }
 /* #endregion */
 
 /* #region NAV */
+nav>div:first-child a {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
 nav input {
     background-color: var(--grey);
     width: 100%;
     height: 5vh;
     border-radius: 2.5vh;
+    margin: 0 25px;
 }
 
 nav button {
@@ -116,5 +127,83 @@ nav button {
 #pages button {
     background-color: transparent;
     display: block;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+/* #endregion */
+
+/* #region FEED */
+#feed {
+    position: relative;
+}
+
+#feed-posts {
+    overflow-y: auto;
+    padding: 25px;
+    height: 90%;
+}
+
+#feed-posts::-webkit-scrollbar {
+    display: none;
+}
+
+.post {
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.post .top-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.post .top-bar img {
+    aspect-ratio: 1;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.post .top-bar *:not(:first-child) {
+    margin-left: 10px;
+}
+
+.post .top-bar p {
+    opacity: 0.5;
+}
+
+.post .top-bar .posted-time {
+    position: absolute;
+    right: 0;
+}
+
+.post .content {
+    margin: 15px 0;
+}
+
+.post .buttons {
+    display: flex;
+    align-items: center;
+}
+
+.post .buttons button {
+    aspect-ratio: 1;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--green);
+}
+
+.post .buttons button.downvote {
+    background-color: var(--red);
+}
+
+.post .buttons *:not(:first-child) {
+    margin-left: 10px;
 }
 /* #endregion */
