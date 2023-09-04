@@ -214,7 +214,7 @@ nav button {
 /* endregion */
 
 /* region LOGIN SIGNIN */
-#left-part, #right-part {
+#signin, #login {
     height: 100vh;
     width: calc(100vw - var(--loginsignin-toppanel-size));
     position: absolute;
@@ -232,21 +232,21 @@ nav button {
     box-shadow: 0 0 30px 10px var(--shadow);
 }
 
-#left-part {
+#signin {
     left: 0;
     clip-path: inset(0 100% 0 0);
 }
 
-#right-part {
+#login {
     right: 0;
     clip-path: inset(0 0 0 0);
 }
 
-.signin #left-part {
+.signin #signin {
     clip-path: inset(0 0 0 0);
 }
 
-.signin #right-part {
+.signin #login {
     clip-path: inset(0 0 0 100%);
 }
 
@@ -305,4 +305,15 @@ nav button {
     font-weight: bold;
     color: var(--blue);
 }
+
+/* region PANELS */
+.loginsigninpanel {
+    padding: 20px;
+}
+
+.loginsigninpanel h1 {
+    width: 100%;
+    text-align: center;
+}
+/* endregion */
 /* endregion */
