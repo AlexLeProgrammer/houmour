@@ -229,16 +229,15 @@ nav button {
     left: 0;
     background: linear-gradient(20deg, #4441E8, #A7A5ED);
     overflow: hidden;
+    box-shadow: 0 0 30px 10px var(--shadow);
 }
 
 #left-part {
-    background-color: green;
     left: 0;
     clip-path: inset(0 100% 0 0);
 }
 
 #right-part {
-    background-color: red;
     right: 0;
     clip-path: inset(0 0 0 0);
 }
