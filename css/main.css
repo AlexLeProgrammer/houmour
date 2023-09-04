@@ -1,4 +1,4 @@
-/* #region REGLES GENERALES */
+/* region REGLES GENERALES */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +12,9 @@
     /* STRUCTURE */
     --bordercolumns: 21vw;
     --centercolumn: 50vw;
+
+    --loginsignin-toppanel-size: 30vw;
+    --loginsignin-transition-time: 500ms;
 }
 
 /* PALETTE */
@@ -39,7 +42,7 @@ button, a {
     text-decoration: none;
 }
 
-body {
+#pIndex {
     padding: 0 2vw;
 }
 
@@ -54,9 +57,9 @@ h2 {
 h3 {
     font-size: 1.2rem;
 }
-/* #endregion */
+/* endregion */
 
-/* #region STRUCTURE */
+/* region STRUCTURE */
 nav {
     display: flex;
     justify-content: space-between;
@@ -100,9 +103,9 @@ section>*:first-child {
     text-align: center;
     margin-bottom: 3vh;
 }
-/* #endregion */
+/* endregion */
 
-/* #region NAV */
+/* region NAV */
 nav>div:first-child a {
     font-weight: bold;
     font-size: 1.1rem;
@@ -123,9 +126,9 @@ nav button {
     margin-left: 2.5vh;
     border-radius: 50%;
 }
-/* #endregion */
+/* endregion */
 
-/* #region PAGES */
+/* region PAGES */
 #pages button {
     background-color: transparent;
     display: block;
@@ -135,9 +138,9 @@ nav button {
     padding: 5px 10px;
     margin: 10px 0;
 }
-/* #endregion */
+/* endregion */
 
-/* #region FEED */
+/* region FEED */
 #feed {
     position: relative;
 }
@@ -208,4 +211,99 @@ nav button {
 .post .buttons *:not(:first-child) {
     margin-left: 10px;
 }
-/* #endregion */
+/* endregion */
+
+/* region LOGIN SIGNIN */
+#left-part, #right-part {
+    height: 100vh;
+    width: calc(100vw - var(--loginsignin-toppanel-size));
+    position: absolute;
+    transition: var(--loginsignin-transition-time);
+}
+
+#top-panel {
+    height: 100vh;
+    width: var(--loginsignin-toppanel-size);
+    position: absolute;
+    transition: var(--loginsignin-transition-time);
+    left: 0;
+    background: linear-gradient(20deg, #4441E8, #A7A5ED);
+    overflow: hidden;
+}
+
+#left-part {
+    background-color: green;
+    left: 0;
+    clip-path: inset(0 100% 0 0);
+}
+
+#right-part {
+    background-color: red;
+    right: 0;
+    clip-path: inset(0 0 0 0);
+}
+
+.signin #left-part {
+    clip-path: inset(0 0 0 0);
+}
+
+.signin #right-part {
+    clip-path: inset(0 0 0 100%);
+}
+
+.signin #top-panel {
+    left: calc(100vw - var(--loginsignin-toppanel-size));;
+}
+
+#top-panel .shape {
+    height: 25vh;
+    aspect-ratio: 1;
+    background-color: rgba(255, 255, 255, 0.15);
+    position: absolute;
+    transition: var(--loginsignin-transition-time);
+}
+
+#top-panel .square {
+    right: 10vh;
+    bottom: 7vh;
+    transform: rotate(-30deg);
+}
+
+#top-panel .triangle {
+    clip-path: polygon(50% 13%, 0% 100%, 100% 100%);
+    transform: rotate(37deg) scale(120%);
+    bottom: 50vh;
+    left: 2vh;
+}
+
+#top-panel .round {
+    border-radius: 50%;
+    top: 10vh;
+    right: 12vh;
+}
+
+.signin #top-panel .square {
+    right: 15vh;
+    bottom: 70vh;
+    transform: rotate(-120deg);
+}
+
+.signin #top-panel .triangle {
+    transform: rotate(325deg) scale(120%);
+    bottom: 10vh;
+    left: 30vh;
+}
+
+.signin #top-panel .round {
+    top: 45vh;
+    right: 30vh;
+}
+
+#top-panel button {
+    padding: 20px 0;
+    width: 60%;
+    border-radius: 10px;
+    font-weight: bold;
+    color: var(--blue);
+}
+/* endregion */

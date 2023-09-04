@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr" class="light-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creer un compte</title>
+
+    <!--FONT-->
+    <link rel="preload" as="font" href="css/fonts/Montserrat/Montserrat.ttf" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/fonts/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="signin">
+    <div id="left-part">
+
+    </div>
+    <div id="right-part">
+
+    </div>
+    <div id="top-panel">
+        <div class="square shape"></div>
+        <div class="triangle shape"></div>
+        <div class="round shape"></div>
+        <button onclick="switchPanel()" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)">Se connecter</button>
+    </div>
+
+    <script src="js/firebase-innit.js" type="module"></script>
+    <script>
+        function switchPanel() {
+          if (document.querySelector("body").className === "signin") {
+            document.querySelector("body").className = "login";
+            document.querySelector("#top-panel button").innerHTML = "Creer un compte";
+          } else {
+            document.querySelector("body").className = "signin";
+            document.querySelector("#top-panel button").innerHTML = "Se connecter";
+          }
+        }
+    </script>
+</body>
+</html>
