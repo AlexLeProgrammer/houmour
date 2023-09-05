@@ -375,5 +375,9 @@ nav button {
     height: 50px;
     border-radius: 5px;
 }
+
+.loginsigninpanel .providers button img {
+    height: 70%;
+}
 /* endregion */
 /* endregion */
