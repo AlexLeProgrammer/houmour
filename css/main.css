@@ -22,6 +22,7 @@
     --white: white;
     --black: black;
     --grey: #d4d4d4;
+    --dark-grey: #696969;
     --blue: #0B22EE;
     --red: red;
     --green: green;
@@ -31,6 +32,7 @@
     --white: black;
     --black: white;
     --grey: #474747;
+    --dark-grey: #696969;
     --blue: #0B22EE;
     --red: red;
     --green: green;
@@ -214,11 +216,16 @@ nav button {
 /* endregion */
 
 /* region LOGIN SIGNIN */
-#signin, #login {
+.loginsigninpanel {
     height: 100vh;
     width: calc(100vw - var(--loginsignin-toppanel-size));
     position: absolute;
     transition: var(--loginsignin-transition-time);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 #top-panel {
@@ -230,6 +237,8 @@ nav button {
     background: linear-gradient(20deg, #4441E8, #A7A5ED);
     overflow: hidden;
     box-shadow: 0 0 30px 10px var(--shadow);
+    padding: 20px 0;
+    background-color: var(--white);
 }
 
 #signin {
@@ -305,16 +314,66 @@ nav button {
     border-radius: 10px;
     font-weight: bold;
     color: var(--blue);
+    z-index: 5;
+}
+
+#top-panel h1, #top-panel p {
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: var(--white);
+    margin-bottom: 20px;
 }
 
 /* region PANELS */
-.loginsigninpanel {
-    padding: 20px;
+.loginsigninpanel h1 {
+    margin-bottom: 50px;
 }
 
-.loginsigninpanel h1 {
-    width: 100%;
-    text-align: center;
+.loginsigninpanel input {
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 20px 5px var(--shadow);
+    background-color: var(--white);
+    margin: 10px;
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.loginsigninpanel>button {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 15px 60px;
+    font-weight: bold;
+    margin: 30px 0 50px;
+}
+
+.loginsigninpanel .forgotpassword {
+    color: var(--dark-grey);
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    margin: 10px 0 0;
+    font-weight: normal;
+    width: 50%;
+    text-align: left;
+}
+
+.loginsigninpanel .providers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 40%;
+}
+
+.loginsigninpanel .providers button {
+    background-color: var(--white);
+    box-shadow: 0 0 20px 5px var(--shadow);
+    margin: 10px;
+    height: 50px;
+    border-radius: 5px;
 }
 /* endregion */
 /* endregion */

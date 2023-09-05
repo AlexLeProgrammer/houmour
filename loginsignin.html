@@ -15,28 +15,41 @@
 <body class="signin">
     <div id="signin" class="loginsigninpanel">
         <h1>Créer un compte</h1>
+        <input type="text" id="input-pseudo" placeholder="Pseudo">
+        <input type="text" id="input-email-signin" placeholder="Email">
+        <input type="password" id="input-password-signin" placeholder="Mot de passe">
+        <input type="password" id="input-confirm-password" placeholder="Confirmer le mot de passe">
+        <button>Créer un compte</button>
+        <p>Ou continuer avec</p>
+        <div class="providers">
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
     </div>
     <div id="login" class="loginsigninpanel">
-        <h1>Se connecter</h1>
+        <h1>Connection</h1>
+        <input type="text" id="input-email-login" placeholder="Email">
+        <input type="password" id="input-password-login" placeholder="Mot de passe">
+        <button class="forgotpassword">Mot de passe oublié ?</button>
+        <button>Se connecter</button>
+        <p>Ou continuer avec</p>
+        <div class="providers">
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
     </div>
     <div id="top-panel">
+        <h1>Deja un compte ?</h1>
+        <p>Connectez-vous.</p>
+        <button onclick="switchPanel()" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)">Se connecter</button>
         <div class="square shape"></div>
         <div class="triangle shape"></div>
         <div class="round shape"></div>
-        <button onclick="switchPanel()" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%)">Se connecter</button>
     </div>
 
+    <script src="js/top-panel.js"></script>
     <script src="js/firebase-innit.js" type="module"></script>
-    <script>
-        function switchPanel() {
-          if (document.querySelector("body").className === "signin") {
-            document.querySelector("body").className = "login";
-            document.querySelector("#top-panel button").innerHTML = "Créer un compte";
-          } else {
-            document.querySelector("body").className = "signin";
-            document.querySelector("#top-panel button").innerHTML = "Se connecter";
-          }
-        }
-    </script>
 </body>
 </html>
