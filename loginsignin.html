@@ -19,7 +19,8 @@
         <input type="text" id="input-email-signin" placeholder="Email">
         <input type="password" id="input-password-signin" placeholder="Mot de passe">
         <input type="password" id="input-confirm-password" placeholder="Confirmer le mot de passe">
-        <button>Créer un compte</button>
+        <p class="errormsg"></p>
+        <button id="button-create-account">Créer un compte</button>
         <p>Ou continuer avec</p>
         <div class="providers">
             <button><img src="src/icons/google.png"></button>
@@ -32,7 +33,8 @@
         <input type="text" id="input-email-login" placeholder="Email">
         <input type="password" id="input-password-login" placeholder="Mot de passe">
         <button class="forgotpassword">Mot de passe oublié ?</button>
-        <button>Se connecter</button>
+        <p class="errormsg"></p>
+        <button id="button-login">Se connecter</button>
         <p>Ou continuer avec</p>
         <div class="providers">
             <button><img src="src/icons/google.png"></button>
@@ -51,5 +53,6 @@
 
     <script src="js/top-panel.js"></script>
     <script src="js/firebase-innit.js" type="module"></script>
+    <script src="js/signinlogin.js" type="module"></script>
 </body>
 </html>

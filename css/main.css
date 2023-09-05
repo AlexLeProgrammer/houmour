@@ -25,6 +25,7 @@
     --dark-grey: #696969;
     --blue: #0B22EE;
     --red: red;
+    --errorred: red;
     --green: green;
     --shadow: rgba(0, 0, 0, 0.25);
 }
@@ -35,6 +36,7 @@
     --dark-grey: #696969;
     --blue: #0B22EE;
     --red: red;
+    --errorred: red;
     --green: green;
     --shadow: rgba(255, 255, 255, 0.25);
 }
@@ -378,6 +380,18 @@ nav button {
 
 .loginsigninpanel .providers button img {
     height: 70%;
+}
+
+.loginsigninpanel .errormsg {
+    color: var(--errorred);
+    background-color: transparent;
+    text-align: left;
+    width: 50%;
+    font-size: .9rem;
+}
+
+#login .errormsg {
+    margin-top: 20px;
 }
 /* endregion */
 /* endregion */
