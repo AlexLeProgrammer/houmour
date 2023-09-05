@@ -251,7 +251,8 @@ nav button {
 }
 
 .signin #top-panel {
-    left: calc(100vw - var(--loginsignin-toppanel-size));;
+    left: calc(100vw - var(--loginsignin-toppanel-size));
+    background: linear-gradient(-20deg, #4441E8, #A7A5ED);
 }
 
 #top-panel .shape {
