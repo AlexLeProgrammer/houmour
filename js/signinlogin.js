@@ -1,4 +1,4 @@
-import { auth, database } from "/js/firebase-innit.js";
+import { auth, database } from "./firebase-innit.js";
 import { createUserWithEmailAndPassword, setPersistence, browserSessionPersistence, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
 import { ref, set } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
